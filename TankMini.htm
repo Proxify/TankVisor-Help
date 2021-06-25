@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes"/>
+  <meta name="version" content="2020.0.0"/>
+  <link rel="StyleSheet" href="./template/styles/topic.min.css" type="text/css"/>
+  <link rel="StyleSheet" data-skin="true" type="text/css" href="./template/Dark/layout.css"/>
+  <link rel="StyleSheet" data-skin="true" href="./template/Dark/userstyles.css" type="text/css"/>
+  
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>TankMini</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
+  <meta name="rh-authors" content="Joey Williams"/>
+  <meta name="topic-comment" content="An overview of the TankMini Control"/>
+</head>
+
+<body class="rh-BODY-wrapper">
+  <div class="cookie-widget-holder" id="cookie-status-widget-holder"></div>
+  <div class="RH-LAYOUT-HEADER-skip-content-container" id="skip-to-content"></div>
+  <header class="RH-LAYOUT-HEADER-container" role="banner">
+    <div class="RH-LAYOUT-HEADER-logo-box  ">
+      <div class="RH-LAYOUT-HEADER-logo" id="logo-holder"></div>
+      <div class="RH-LAYOUT-HEADER-title" id="topic-title-holder"></div>
+    </div>
+    <div class="RH-LAYOUT-HEADERMENU-container" id="header-menu"></div>
+  </header>
+  <main role="main" class="RH-LAYOUT-BODY-container">
+    <div class="RH-LAYOUT-SEARCHRESULTS" id="rh-searchresults"></div>
+    <div class="RH-LAYOUT-LEFTPANEL-container" id="rh-leftpanel"></div>
+    <div class="rh-layout-BODY-main" id="rh-layout-main">
+      <div class="RH-LAYOUT-TOOLBAR-toolbar-box" id="rh-toolbar"></div>
+      <div class="rh-layout-BODY-body">
+        <div class="RH-LAYOUT-CENTERPANEL-container">
+          <div class="rh-layout-selectdetails" id="rh-selectdetails"></div>
+          <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
+  <h1>TankMini</h1>
+  <p><em>This article references <a href="Tank_Detail.htm">Tank Detail</a>, <a href="Tank_Overview.htm">Tank Overview</a>, and <a href="Tank_Configuration.htm">Tank Configuration</a>.</em></p>
+  <p> </p>
+  <p>The TankMini control can be found on the <a href="Tank_Overview.htm"><u>Tank Overview</u></a> screen, as well as an individual Tank&#39;s <a href="Tank_Detail.htm"><u>Tank Detail</u></a> screen.</p>
+  <p>This control updates the displayed values with live data through TankVisor&#39;s active OPC connection.</p>
+  <p> </p>
+  <h2>How to read TankMini values</h2>
+  <p>The TankMini control can be broken down into 3 active component:</p>
+  <ol class="Decimal">
+    <li>Normal Resolution Read (Ex. Inches)</li>
+    <li>High Resolution Read (Ex. 1/16th Inches)</li>
+    <li>Convert Output/Write Value (Ex. Volume)
+      <ul class="Disc">
+        <li>This value is determined by using the Normal-Res and Hi-Res values on their corresponding strapping tables.</li>
+      </ul>
+    </li>
+  </ol>
+  <ul class="Disc">
+  </ul>
+  <p><img src="assets/images/TankMini Diagram1.png"/></p>
+  <p> </p>
+  <p> </p>
+  <h2>TankMini state colors and what they mean</h2>
+  <p>The TankMini <a class="glossterm" href="#" data-rhwidget="ExpandSpot" data-target="glossary">control</a><span class="expanding-content" data-targetname="glossary">If used in the context of TankVisor, a control is simply a UI element that is being displayed to the user.</span> can be in 3 different states. These states are shown on the bottom-side of the control by changing the color of the background behind the &quot;Output / Write&quot; value.</p>
+  <p> </p>
+  <p>These 3 states are defined as:<br/>
+     </p>
+  <table cellpadding="1" style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:outset;border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:50%"/>
+      <col style="width:50%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;text-align: center"><img src="assets/images/image15.png"/><strong></strong></td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p><strong>Normal operational state</strong></p>
+          <p>In this state, TankVisor has established communications with the OPC Server. The Tank Mini control is actively reading values and displaying them live.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;text-align: center"><img src="assets/images/image16.png"/></td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p><strong>Incorrect Tank Mode state</strong></p>
+          <p>In this state, TankMini is notifying the user that the current <em>Tank_Mode</em> value being read from the OPC Server does not match the configuration for this tank.</p>
+          <p>Being in this state does not necessarily mean you are in a &#39;bad&#39; state. For example, depending on your configuration, it could simply mean you are in High_Roof mode rather than Low_Roof mode.</p>
+          <p><em>For more information on this state, please reference the &#39;Logic Enable&#39; definition in <u><a href="Tank_Configuration.htm">Tank Configuration</a></u>.</em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;text-align: center"><img src="assets/images/image17.png"/></td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p><strong>Bad communications state</strong></p>
+          <p>In this state, TankMini is notifying the user that there is an issue reading the values from the OPC Server. This could be due to the point.parameters not existing or that OPC communications were lost entirely.</p>
+          <p>It is never ideal to have any tanks in this mode as it can potentially slow down the entirety of TankVisor&#39;s logic due to having to work around tank(s) with bad comms.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+          <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
+        </div>
+        <div class="RH-LAYOUT-RIGHTPANEL-container" id="rh-rightpanel"></div>
+      </div>
+    </div>
+  </main>
+  <footer role="contentinfo" class="RH-LAYOUT-FOOTER-container" id="rh-footer"></footer>
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "."
+    gCommonRootRelPath = "."
+    gTopicId = "3.0_1"
+  
+//]]></script>
+
+
+  <script src="./template/scripts/topicpage.js"></script>
+  <script src="./whxdata/layoutconfig.js"></script>
+  <script src="./whxdata/brsdata.js"></script>
+  
+    
+      
+          
+
+            
+              
+                  
+
+
+</body></html>

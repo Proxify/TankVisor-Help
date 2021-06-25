@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes"/>
+  <meta name="version" content="2020.0.0"/>
+  <link rel="StyleSheet" href="./template/styles/topic.min.css" type="text/css"/>
+  <link rel="StyleSheet" data-skin="true" type="text/css" href="./template/Dark/layout.css"/>
+  <link rel="StyleSheet" data-skin="true" href="./template/Dark/userstyles.css" type="text/css"/>
+  
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Tank Configuration</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
+  <meta name="rh-authors" content="Joey Williams"/>
+  <meta name="topic-comment" content="Detailed instructions on how to enter in Tank Configuration on the Tank Detail page."/>
+</head>
+
+<body class="rh-BODY-wrapper">
+  <div class="cookie-widget-holder" id="cookie-status-widget-holder"></div>
+  <div class="RH-LAYOUT-HEADER-skip-content-container" id="skip-to-content"></div>
+  <header class="RH-LAYOUT-HEADER-container" role="banner">
+    <div class="RH-LAYOUT-HEADER-logo-box  ">
+      <div class="RH-LAYOUT-HEADER-logo" id="logo-holder"></div>
+      <div class="RH-LAYOUT-HEADER-title" id="topic-title-holder"></div>
+    </div>
+    <div class="RH-LAYOUT-HEADERMENU-container" id="header-menu"></div>
+  </header>
+  <main role="main" class="RH-LAYOUT-BODY-container">
+    <div class="RH-LAYOUT-SEARCHRESULTS" id="rh-searchresults"></div>
+    <div class="RH-LAYOUT-LEFTPANEL-container" id="rh-leftpanel"></div>
+    <div class="rh-layout-BODY-main" id="rh-layout-main">
+      <div class="RH-LAYOUT-TOOLBAR-toolbar-box" id="rh-toolbar"></div>
+      <div class="rh-layout-BODY-body">
+        <div class="RH-LAYOUT-CENTERPANEL-container">
+          <div class="rh-layout-selectdetails" id="rh-selectdetails"></div>
+          <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
+  <h1>Tank Configuration</h1>
+  <p><em>This article references <a href="Strapping_Tables.htm">Strapping Tables</a>, <a href="Tank_Detail.htm">Tank Detail</a>, and <a href="TankMini.htm">TankMini</a>.</em></p>
+  <h4>What is Tank Configuration and what references it?</h4>
+  <p>The Tank Configuration panel contains all of the information for how a specific tank should communicate with the DCS, including which &#39;point.parameters&#39; should be used for I/O.</p>
+  <p>When appropriate and valid information is entered into the Tank Configuration panel, TankVisor will use this information along with the <a class="glossterm" href="#" data-rhwidget="ExpandSpot" data-target="glossary">Strapping Table</a><span class="expanding-content" data-targetname="glossary">The Strapping Table can be found on a Tank&#39;s Detail screen. It holds the translation map for TankVisor. You can think of it in a way of, &quot;If I&#39;m reading &#39;X&#39; many inches, the corresponding volume is &#39;Y&#39;&quot;. </span> and <a class="glossterm" href="#" data-rhwidget="ExpandSpot" data-target="glossary1">Hi-Res Table</a><span class="expanding-content" data-targetname="glossary1">The Hi-Res Table can be found on a Tank&#39;s Detail screen. Similar to the Strapping Table, it holds the translation map for TankVisor, but at a higher resolution (1/16th inches, rather than inches).</span> maps to determine which value to output back to the DCS.</p>
+  <p>A full list of the parameter definitions can be found <a href="Tank_Configuration.htm">Tank Configuration</a>.</p>
+  <p> </p>
+  <h4>Where can it be found?</h4>
+  <p>The Tank Configuration panel can be found on the left side of any <a href="Tank_Detail.htm">Tank Detail</a> screen.</p>
+  <p><img src="assets/images/image7.png" style="cursor: nwse-resize;"/></p>
+  <p> </p>
+  <h4>Configuration definitions</h4>
+  <table cellpadding="1" style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:outset;border-collapse:collapse;width:100%;font-weight:100;text-align:center">
+    <colgroup style="font-weight: normal">
+      <col style="width: 366px;"/>
+      <col style="width: 699px;"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Tank Title</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;"><br/>
+          Indicates the title of the tank within TankVisor.<br/>
+          <em>Note does not necessarily have to match the tank&#39;s pointname on the DCS</em>.
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Critical Zone</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p>The critical zone is a integer value.<br/>
+            <br/>
+            If the input / read value for &quot;<em>[InputPointName]/[Input Parameter Path]</em>&quot; from the DCS is less than or equal to the Critical Zone value, then a calculation is performed to determine the returned output to the DCS as opposed to looking up the value from the Strapping Table.<br/>
+            <br/>
+            <br/>
+            When within the critical zone, the following calculation is used:
+          </p>
+          <p>Returned output =&gt; ((X * 16) + Y) * Z</p>
+          <p><em>Where:</em></p>
+          <p><em>X is the INCHES from the DCS</em><em></em></p>
+          <p><em>Y is the HI-RES reading from DCS (ex. 1/16th of an inch)</em></p>
+          <p><em>Z is the 1st index in the HI-RES table (ex. The value of 1/16th within the HI-RES table)</em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Enable Logic Path</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p>The value entered for &#39;<em>Enable Logic Path</em>&#39; should be the fully qualified or absolute path to the &quot;<em>Enable</em>&quot; parameter on the tank&#39;s control module within the DCS. This value is used to determine if TankVisor should execute this tank&#39;s strapping logic.</p>
+          <p>The returned value from the DCS must be an integer.<br/>
+            <br/>
+            <em>This is often used to indicate the Tank Mode, such as roof positioning being HIGH or LOW.</em>
+          </p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Tank Mode To Enable Logic</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p>The value for &quot;<em>Tank Mode To Enable Logic&quot;</em> must be an integer.<br/>
+            <br/>
+            This integer value, determined by the user, will be used to indicate when TankVisor&#39;s strapping logic should execute for this tank.
+          </p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Logic Enabled</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p>A <em>True</em> or <em>False</em> value will be indicated.<br/>
+            <br/>
+            If the value entered in &quot;<em>Tank Mode To Enable Logic</em>&quot; is equal to the returned DCS value from the qualified &quot;<em>Enable Logic Path</em>&quot;, then and only then will the strapping logic for this tank will execute and the <em></em>&quot;<em>Logic Enabled</em>&quot; TextBox will indicate <em>True<u></u></em>.
+          </p>
+          <p>If the above conditions are not met, then the TextBox will display <em>False</em> as well as show a dark grey border around the output to the <a href="TankMini.htm"><u>TankMini</u></a> display.<br/>
+            <br/>
+             <img src="assets/images/image9.png"/>
+          </p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Input PointName (Read)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            The name of the control module that houses the parameter TankVisor should use to <u>read</u> the tank&#39;s level (<em>ex. inches</em>).<br/>
+            This should <u>not</u> include the parameter path, just point / module name.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Input Parameter Path (Read)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            The fully qualified or absolute path, minus the module name, to the parameter TankVisor should use to <u>read</u> the tank&#39;s level (<em>ex. inches</em>).</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">High Res. Input PointName (Read)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            The name of the control module that houses the parameter TankVisor should use to <u>read</u> the tank&#39;s <u>high-res</u> level (<em>ex. 1/16th inch</em>).<br/>
+            This should <u>not</u> include the parameter path, just point / module name.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">High Res. Input Parameter Path (Read)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            The fully qualified or absolute path, minus the module name, to the parameter TankVisor should use to <u>read</u> the tank&#39;s <u>high-res</u> level (<em>ex. 1/16th inch</em>).</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Output PointName (Write)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            The name of the control module that houses the parameter TankVisor should use to <u>write</u> out the tank&#39;s <u>volume</u>.<br/>
+            This should <u>not</u> include the parameter path, just point / module name.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Output Parameter Path (Write)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            The fully qualified or absolute path, minus the module name, to the parameter TankVisor should use to <u>write</u> out the tank&#39;s <u>volume</u>.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Scratch Mode Path</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            The value entered for &#39;<em>Scratch Mode Path</em>&#39; should be the fully qualified or absolute path to the &quot;<em>Scratch Mode</em>&quot; parameter on the tank&#39;s control module within the DCS.</p>
+          <p><em style="font-size: 12px">Note that Scratch Pad entries are entered by the operator and are not live readings from an instrument.</em></p>
+          <p>This value represents which mode the Scratch Calculation should be in.</p>
+          <p>The following modes exist:</p>
+          <ul class="Disc">
+            <li>To Volume</li>
+            <li>To Metric</li>
+          </ul>
+          <p><em>More details below</em>...<em></em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Tank Mode To Enable &#39;To Volume&#39; Mode</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            An integer value.<br/>
+            <br/>
+            The value entered here should represent the value at which the DCS result of &quot;<em>Scratch Mode Path</em>&quot; should trigger the &quot;To <u>Volume</u>&quot; mode within TankVisor&#39;s Scratch Pad logic.
+          </p>
+          <p>(<em>Ex. if the value &quot;0&quot; is entered into this textbox, the result of &quot;Scratch Mode Path&quot; must be &quot;0&quot; for the Scratch Pad logic to be in &quot;To <u>Volume</u>&quot; mode.</em>)</p>
+          <p> </p>
+          <p>The &quot;To Volume&quot; mode indicates that the Scratch Pad logic will take the DCS result values for &quot;<em>[Input Scratch PointName]/[Input Scratch Parameter Path]</em>&quot; and &quot;<em>[High Res. Input Scratch PointName]/[High Res. Input Scratch Param Path]</em>&quot; (<em>Ex. Inches, 1/16th inches, respectively</em>) and determine the output to the DCS using the <a href="Strapping_Tables.htm">Strapping Tables</a>. This value is sent as an output to &quot;[<em>Output Scratch PointName]/[Output Scratch Parameter Path]</em>&quot; (<i>Ex. Volume</i>).</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Tank Mode To Enable &#39;To Metric&#39; Mode</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            An integer value.<br/>
+            <br/>
+            The value entered here should represent the value at which the DCS result of &quot;<em>Scratch Mode Path</em>&quot; should trigger the &quot;To <u>Metric</u>&quot; mode within TankVisor&#39;s Scratch Pad logic.
+          </p>
+          <p>(<em>Ex. if the value &quot;1&quot; is entered into this textbox, the result of &quot;Scratch Mode Path&quot; must be &quot;1&quot; for the Scratch Pad logic to be in &quot;To <u>Metric</u>&quot; mode.</em>)</p>
+          <p> </p>
+          <p>The &quot;To Metric&quot; mode indicates that the Scratch Pad logic will take the DCS result values for &quot;<em>[<em>Output Scratch PointName]/[Output Scratch Parameter Path]</em></em>&quot; (<em>Ex. Volume</em>) and perform an inverse calculation on the <a href="Strapping_Tables.htm">Strapping Table</a><a href="Strapping_Tables.htm">s</a>. The result of this inverse calculation is sent as an output to &quot;<em>[<em>Input Scratch PointName]/[Input Scratch Parameter Path]</em></em>&quot; (<em>Ex. Inches</em>).</p>
+          <p>(<em>Ex. if in &quot;To Metric&quot; mode, and the Volume read is &quot;29.4&quot;, in the example below the Inches written back to the DCS would be &quot;18&quot;</em>)<br/>
+            <img src="assets/images/image10.png"/>
+          </p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Input Scratch PointName (Read)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;">
+          <p><br/>
+            The name of the control module that houses the parameter TankVisor should use to <u>read</u> the tank&#39;s Scratch level (<em>ex. inches</em>).<br/>
+            This should <u>not</u> include the parameter path, just point / module name.</p>
+          <p><em style="font-size: 12px">Note that Scratch Pad entries are entered by the operator and are not live readings from an instrument.</em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Input Scratch Parameter Path (Read)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;"><br/>
+          The fully qualified or absolute path, minus the module name, to the parameter TankVisor should use to <u>read</u> the tank&#39;s <u>Scratch </u>level (<em>ex. inches</em>).
+          <p><em style="font-size: 12px">Note that Scratch Pad entries are entered by the operator and are not live readings from an instrument.</em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">High Res. Input Scratch PointName (Read)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;"><br/>
+          The name of the control module that houses the parameter TankVisor should use to <u>read</u> the tank&#39;s <u>high-res</u><u> Scratch</u> level (<em>ex. 1/16th inch</em>).<br/>
+          This should <u>not</u> include the parameter path, just point / module name.
+          <p><em style="font-size: 12px">Note that Scratch Pad entries are entered by the operator and are not live readings from an instrument.</em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">High Res. Input Scratch Param Path (Read)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;"><br/>
+          The fully qualified or absolute path, minus the module name, to the parameter TankVisor should use to <u>read</u> the tank&#39;s <u>high-res Scratch</u> level (<em>ex. 1/16th inch</em>).
+          <p><em style="font-size: 12px">Note that Scratch Pad entries are entered by the operator and are not live readings from an instrument.</em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Output Scratch PointName (Write)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;"><br/>
+          The name of the control module that houses the parameter TankVisor should use to <u>write</u> out the tank&#39;s <u>Scratch </u><u>volume</u>.<br/>
+          This should <u>not</u> include the parameter path, just point / module name.
+          <p><em style="font-size: 12px">Note that Scratch Pad entries are entered by the operator and are not live readings from an instrument.</em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 366px;text-align: right; letter-spacing: 0px; line-height: 1; font-weight: normal;">
+          <p style="padding-right: 6px;">Output Scratch Parameter Path (Write)</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width: 699px;text-align: left;"><br/>
+          The fully qualified or absolute path, minus the module name, to the parameter TankVisor should use to <u>write</u> out the tank&#39;s <u>Scratch </u><u>volume</u>.
+          <p><em style="font-size: 12px">Note that Scratch Pad entries are entered by the operator and are not live readings from an instrument.</em></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</div>
+          <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
+        </div>
+        <div class="RH-LAYOUT-RIGHTPANEL-container" id="rh-rightpanel"></div>
+      </div>
+    </div>
+  </main>
+  <footer role="contentinfo" class="RH-LAYOUT-FOOTER-container" id="rh-footer"></footer>
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "."
+    gCommonRootRelPath = "."
+    gTopicId = "3.0_2"
+  
+//]]></script>
+
+
+  <script src="./template/scripts/topicpage.js"></script>
+  <script src="./whxdata/layoutconfig.js"></script>
+  <script src="./whxdata/brsdata.js"></script>
+  
+    
+      
+          
+
+            
+              
+                  
+
+
+</body></html>

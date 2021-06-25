@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="TankVisor Help" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="TankVisor_Help.htm">
+    
+    <topic>
+      TankVisor_Help.htm
+    </topic>
+    
+    <topic>
+      Tank_Detail.htm
+    </topic>
+    
+    <topic>
+      Tank_Overview.htm
+    </topic>
+    
+    <topic>
+      Settings.htm
+    </topic>
+    
+    <topic>
+      How_to_add_a_tank.htm
+    </topic>
+    
+    <topic>
+      How_to_modify_Strapping_Tables.htm
+    </topic>
+    
+    <topic>
+      TankMini.htm
+    </topic>
+    
+    <topic>
+      Tank_Configuration.htm
+    </topic>
+    
+    <topic>
+      Strapping_Tables.htm
+    </topic>
+    
+    <topic>
+      About_Us.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        en_US
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>

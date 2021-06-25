@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Settings"]],"1":[["\n  "],["\n  ","TankVisor's Client settings can be found by clicking the ","\"Settings\""," icon on the left side of TankVisor.","\n  ","From here, the user can configured the OPC connection, modify the tick-rate and manage any miscellaneous settings.","\n  ","\n\n"]],"2":[["Client Settings"]],"id":"0"})
