@@ -36,9 +36,82 @@
           <div class="rh-layout-selectdetails" id="rh-selectdetails"></div>
           <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
   <h1>Client Settings</h1>
-  <p>TankVisor&#39;s Client settings can be found by clicking the <em>&quot;Settings&quot;</em> icon on the left side of TankVisor.</p>
+  <p><em>This article references <a href="Alarm_Banner.htm">Alarm Banner</a></em><em>.</em></p>
+  <p> </p>
+  <p>TankVisor&#39;s Client Settings can be found by clicking the <em>&quot;Settings&quot;</em> icon on the left side of TankVisor.</p>
   <p>From here, the user can configured the OPC connection, modify the tick-rate and manage any miscellaneous settings.</p>
-  <p><img src="assets/images/image29.png"/></p>
+  <p> </p>
+  <h4><span id="">Setting Definitions</span></h4>
+  <table cellpadding="1" style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:outset;border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:50%"/>
+      <col style="width:50%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>Connection Address</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>This entry should contain the IP address that hosts the OPC Server.</p>
+          <p>If the server is hosted on the same machine that TankVisor is installed on, the IP <em>&quot;127.0.0.1&quot;</em> or hostname <em>&quot;localhost&quot;</em> can be used.<em></em></p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>OPC Server ID</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>This entry should be the name of the OPC Server ID. If you are unsure of your ID, please reference your OPC Server&#39;s documentation or administrative panel.</p>
+          <p>The default OPC ID for DeltaV is <em>&quot;OPC.DeltaV.1&quot;</em>.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>OPC Tick Rate</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>This entry should represent the delay in millseconds between each &#39;tick&#39; or &#39;poll&#39; action that TankVisor performs.</p>
+          <p>Due to TankVisor using a subscription model for receiving value updates, this setting primarily effects the OPC write functionality from TankVisor to the OPC Server.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>OPC Status Point Path</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>This entry should be the fully qualified path to a Point.Parameter on the DCS that will serve as a Status / Watchdog value for TankVisor.</p>
+          <p>TankVisor will use this point to ensure stable communications with the OPC Server.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>Customer Name</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>Displays customer name. This servers no other purpose other than debugging customer issues.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>Tank Name Export Path</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>This entry should be the fully qualified windows path where TankVisor will export a CSV file containing all of the tank names.</p>
+          <p>This file is generated on application startup and is often used to supply data to comboboxes in HMIs.</p>
+        </td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">
+          <p>Enable Alarm Banner</p>
+        </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">Enables or Disables the <a href="Alarm_Banner.htm">Alarm Banner</a> functionality within TankVisor.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><img src="assets/images/image31.png"/></p>
+  <p> </p>
 
 </div>
           <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
@@ -52,7 +125,7 @@
 
     gRootRelPath = "."
     gCommonRootRelPath = "."
-    gTopicId = "2.0_3"
+    gTopicId = "1.0_3"
   
 //]]></script>
 

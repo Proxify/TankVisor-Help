@@ -11,11 +11,11 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <title>Strapping Tables</title>
+  <title>Alarm Banner</title>
   <meta name="topic-status" content="Draft"/>
   <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
   <meta name="rh-authors" content="Joey Williams"/>
-  <meta name="topic-comment" content="Information on Strapping and Hi-Res tables."/>
+  <meta name="topic-comment" content="Details information on TankVisor&#39;s Alarm Banner."/>
 </head>
 
 <body class="rh-BODY-wrapper">
@@ -37,17 +37,25 @@
         <div class="RH-LAYOUT-CENTERPANEL-container">
           <div class="rh-layout-selectdetails" id="rh-selectdetails"></div>
           <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
-  <h1>Strapping Tables</h1>
-  <p>Within TankVisor, a tank can have 2 strapping tables, a Normal-Resolution table and a High-Resolution Table.<em><br/>
-      <span style="font-size:12px">Often times, the Normal-Resolution table is simply called the &quot;Strapping Table&quot; and the High-Resolution table is called the &quot;Hi-Res Table&quot;</span></em></p>
-  <h4>What is a Strapping Table?</h4>
-  <p>Under the hood, a Strapping Table is a Hash Map. The &#39;Read Value&#39; is the key and the &#39;Output Value&#39; is the corresponding &#39;value&#39; in the KeyValuePair. In short, a Strapping Table is <span>a structure that can map<span> keys (Read Value)</span></span><span><span> </span>to values (Output Value)</span><span>. The underlying hash map uses a hash function </span><span>to compute an<span> </span></span><i>index</i><span>, also called a<span> </span></span><i>hash code</i><span>, into an array of<span> </span></span><i>buckets</i><span><span> </span>or<span> </span></span><i>slots</i><span>, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored. This allows an efficient average lookup complexity of O(1). </span></p>
-  <h4>Where can I find the Strapping tables?</h4>
-  <p>Both Strapping tables can be found on the right side of the <a href="Tank_Detail.htm">Tank Detail</a> screen, labeled appropriately as a header on the top of each table.</p>
-  <p><img src="assets/images/image22.png"/></p>
+  <h1>Alarm Banner</h1>
+  <p><i>This article references <a href="Tank_Configuration.htm#h">Tank Configuration</a>.</i></p>
   <p> </p>
-  <h4>How can I modify a strapping table?</h4>
-  <p>Please reference the <a href="How_to_modify_Strapping_Tables.htm">Manage Strapping Tables</a> article.</p>
+  <h4>What is the Alarm Banner?</h4>
+  <p>The Alarm Banner provides the user with up to 10 descriptive live alerts on TankVisor&#39;s process. These alarms are critical to TankVisor&#39;s operations and should be addressed as soon as possible.</p>
+  <p> </p>
+  <h4><strong>Where is the Alarm Banner?</strong></h4>
+  <p>The Alarm Banner can be found on the bottom of the TankVisor application and only appears when an alarm is active and will only go away once the alarm has been acknowledged and fixed.<br/>
+    If an alarm is acknowledged and is still <em>active</em> then it will reappear within the Alarm Banner.</p>
+  <p>In addition to above, the Alarm Banner will not appear within the first 90 seconds of TankVisor&#39;s startup. This is to give the application time to subscribe to all OPC values.</p>
+  <p> </p>
+  <h4>What type of alarms are displayed?</h4>
+  <p>Currently the Alarm Banner will display an alarm under the following conditions:</p>
+  <ul class="Disc">
+    <li>The <a href="Tank_Configuration.htm#Logic_Enabled">Logic_Enabled</a> bit is resulting in the same value of <em>&quot;Both False&quot;</em> or <em>&quot;Both True&quot;</em> in both High and Low roof modes for a corresponding tank.</li>
+    <li>The <em></em><a href="Tank_Configuration.htm#Enable_Logic_Path">Enable_Logic_Path</a> value (often TANK_MODE) is resulting with a non-boolean value.</li>
+    <li>If any value within a Tank is reading a bad value of <em>&quot;###&quot;</em>.</li>
+  </ul>
+  <p><img src="assets/images/image33.png"/></p>
 
 </div>
           <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
@@ -61,7 +69,7 @@
 
     gRootRelPath = "."
     gCommonRootRelPath = "."
-    gTopicId = "3.0_4"
+    gTopicId = "3.0_1"
   
 //]]></script>
 
