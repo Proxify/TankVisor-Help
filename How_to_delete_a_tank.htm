@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes"/>
+  <meta name="version" content="2020.0.0"/>
+  <link rel="StyleSheet" href="./template/styles/topic.min.css" type="text/css"/>
+  <link rel="StyleSheet" data-skin="true" type="text/css" href="./template/Dark/layout.css"/>
+  <link rel="StyleSheet" data-skin="true" href="./template/Dark/userstyles.css" type="text/css"/>
+  
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>How to delete a tank</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
+  <meta name="rh-authors" content="Joshua Bonnette"/>
+  <meta name="topic-comment" content=""/>
+</head>
+
+<body class="rh-BODY-wrapper">
+  <div class="cookie-widget-holder" id="cookie-status-widget-holder"></div>
+  <div class="RH-LAYOUT-HEADER-skip-content-container" id="skip-to-content"></div>
+  <header class="RH-LAYOUT-HEADER-container" role="banner">
+    <div class="RH-LAYOUT-HEADER-logo-box  ">
+      <div class="RH-LAYOUT-HEADER-logo" id="logo-holder"></div>
+      <div class="RH-LAYOUT-HEADER-title" id="topic-title-holder"></div>
+    </div>
+    <div class="RH-LAYOUT-HEADERMENU-container" id="header-menu"></div>
+  </header>
+  <main role="main" class="RH-LAYOUT-BODY-container">
+    <div class="RH-LAYOUT-SEARCHRESULTS" id="rh-searchresults"></div>
+    <div class="RH-LAYOUT-LEFTPANEL-container" id="rh-leftpanel"></div>
+    <div class="rh-layout-BODY-main" id="rh-layout-main">
+      <div class="RH-LAYOUT-TOOLBAR-toolbar-box" id="rh-toolbar"></div>
+      <div class="rh-layout-BODY-body">
+        <div class="RH-LAYOUT-CENTERPANEL-container">
+          <div class="rh-layout-selectdetails" id="rh-selectdetails"></div>
+          <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
+  <h1>How to delete a tank</h1>
+  <p><span style="font-weight:100;">Please follow the steps below to remove a tank from your TankVisor application.</span></p>
+  <p><em>This article references <a href="Tank_Overview.htm">Tank Overview</a>.</em></p>
+  <p> </p>
+  <p><span style="font-weight:100;"></span>There is one method to remove a tank from TankVisor, via manual deletion from the &quot;<em>tankInfo.json&quot; file located in &quot;C:\Program File (x86)\Scallon Controls\TankVisor\TankVisor\tankInfo.json</em>&quot;.</p>
+  <p> </p>
+  <h2>Manual Deletion</h2>
+  <ol class="Decimal">
+    <li>Open the &quot;Notepad++&quot; application.<br/>
+      You can launch it from the start menu or by double-clicking the file at &quot;<em>C:\Program Files (x86)\Notepad++\notepad++.</em><em>exe</em>&quot;.<img src="assets/images/image35.png" style="border-width: 1px; border-color: rgb(0, 0, 0);"/><br/>
+    </li>
+    <li>Click, drag, and drop the &quot;<em>tankInfo.json</em>&quot; file onto the Notepad++ window.<br/>
+      <img src="assets/images/image38.png"/><br/>
+    </li>
+    <li>Click &quot;Search&quot; on the Notepad++ toolbar and then click &quot;Find&quot;. The CTRL + F shortcut also brings up the &quot;Find&quot; window.<img src="assets/images/image39.png"/><br/>
+    </li>
+    <li>In the &quot;Find what :&quot; column, type in the tank you wish you delete in the format of &quot;tk ###&quot; where the ### is the tank number. Click &quot;Find Next&quot;.<img src="assets/images/image41.png"/><br/>
+    </li>
+    <li>Notepad++ will jump down to where the entry is for that tank. You can close the &quot;Find&quot; window.<img src="assets/images/image43.png"/><br/>
+    </li>
+    <li>Near the bracket that begins the section for the tank, click the  [-]  to minimize the section of text. In this case, &quot;TK 201 HIGH&quot; was minimized.<img src="assets/images/image44.png"/><br/>
+    </li>
+    <li>Repeat the previous step again to minimize the next section of text that applies to the same tank. In this case, section &quot;TK 201 LOW&quot;.<br/>
+      <i>Notice that both sections of Tank 201 are now minimized.<br/>
+      </i><img height="583" src="assets/images/image45.png" width="736"/><br/>
+    </li>
+    <li>Highlight the Tank section by click and dragging over the section displayed in the screenshot below. Hit the &quot;delete&quot; key on your keyboard to remove the section.<br/>
+      <i>Ensure that the highlighted region begins to the left of the upper open-bracket and ends to the left of the lower open-bracket that starts the next tank section.<br/>
+        The following screenshots show before and after deletion.                                                <img src="assets/images/image46.png"/> </i><img src="assets/images/image47.png"/><br/>
+    </li>
+    <li>Be sure to save your changes by clicking File, then Save. You can also use the shortcut CTRL + S.<img src="assets/images/image48.png"/><br/>
+    </li>
+    <li>You have now deleted a Tank from TankVisor. The change will take effect next time the TankVisor application is launched.<br/>
+      <em>Once TankVisor is restarted, refer to</em> <em><a href="Tank_Overview.htm">Tank Overview</a> to verify that the desired tank has been removed. </em>
+    </li>
+    <br/>
+    <br/>
+     
+  </ol>
+
+</div>
+          <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
+        </div>
+        <div class="RH-LAYOUT-RIGHTPANEL-container" id="rh-rightpanel"></div>
+      </div>
+    </div>
+  </main>
+  <footer role="contentinfo" class="RH-LAYOUT-FOOTER-container" id="rh-footer"></footer>
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "."
+    gCommonRootRelPath = "."
+    gTopicId = "2.0_2"
+  
+//]]></script>
+
+
+  <script src="./template/scripts/topicpage.js"></script>
+  <script src="./whxdata/layoutconfig.js"></script>
+  <script src="./whxdata/brsdata.js"></script>
+  
+    
+      
+          
+
+            
+              
+                  
+
+
+</body></html>
